@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Routes, Route, NavLink } from "react-router-dom";
 import styles from "./main.module.css";
 import {
   fetchFilms,
@@ -8,6 +9,12 @@ import {
   fetchStarships,
   fetchVehicles,
 } from "../../api/getFetch";
+import Films from "../../images/films.png";
+import People from "../../images/people.png";
+import Planet from "../../images/planet2.png";
+import Species from "../../images/species.png";
+import Starships from "../../images/starships.png";
+import Vehicles from "../../images/vehicles.png";
 
 export default function Main() {
   const [films, setFilms] = useState([]);
@@ -41,41 +48,46 @@ export default function Main() {
   console.log("species", species);
   console.log("starships", starships);
   console.log("vehicles", vehicles);
+  const list = [
+    { title: "films", img: `${Films}` },
+    { title: "people", img: `${People}` },
+    { title: "planets", img: `${Planet}` },
+    { title: "species", img: `${Species}` },
+    { title: "starships", img: `${Starships}` },
+    { title: "vehicles", img: `${Vehicles}` },
+  ];
 
   return (
     <>
-      {/* <video width="480" autoplay controls>
-        <source
-          src="https://www.youtube.com/watch?v=tYSbIKgYWdw&ab_channel=%D0%9F%D0%B0%D0%BB%D0%B8%D1%82%D1%80%D0%B0"
-        //   type="video/mp4"
-        />
-      </video> */}
-      <iframe
+      {/* <iframe
         width="560"
         height="315"
-        src="https://www.youtube.com/embed/tYSbIKgYWdw"
+        src="https://www.youtube.com/embed/tYSbIKgYWdw?modestbranding=1"
         title="YouTube video player"
-        frameborder="0"
+        srcDoc="<style>*{padding:0;margin:0;overflow:hidden}
+    html,body{height:100%}
+    img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}
+    span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}
+    </style>
+    <a href=https://www.youtube.com/embed/tYSbIKgYWdw?modestbranding=1>
+    <img src=https://img.youtube.com/vi/li_9PBrcOcQ/hqdefault.jpg alt='Demo video'>
+    <span>▶</span>
+    </a>"
+        frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      ></iframe>
+        allowFullScreen
+      ></iframe> */}
       <ul>
-        <li className={styles.item}>films</li>
-        <li className={styles.item}>people</li>
-        <li className={styles.item}>planets</li>
-        <li className={styles.item}>species</li>
-        <li className={styles.item}>starships</li>
-        <li className={styles.item}>vehicles</li>
+        {list &&
+          list.map((item) => {
+            return (
+              <li className={styles.item} key={item.title}>
+                <NavLink to={`/${item.title}`} >{item.title}
+                <img src={item.img}></img></NavLink>
+              </li>
+            );
+          })}
       </ul>
     </>
-    // <ul>
-    //   {films &&
-    //     films.map((film) => (
-    //       <li key={film.title}>
-    //         <h2>{film.title}</h2>
-    //         <span>{film.opening_crawl}</span>
-    //       </li>
-    //     ))}
-    // </ul>
   );
 }
