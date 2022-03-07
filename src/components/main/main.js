@@ -49,80 +49,11 @@ import People from "../../images/people.png";
 import Planet from "../../images/planet2.png";
 import Species from "../../images/species.png";
 import Starships from "../../images/starships.png";
-import Vehicles from "../../images/vehicles.png";
+import Vehicles from "../../images/military.png";
+// import Vehicles from "../../images/vehicles.png";
+import Slider from "../slider/slider";
 
 export default function Main() {
-  //   const [films, setFilms] = useState([]);
-  //   const [people, setPeople] = useState([]);
-  //   const [planets, setPlanets] = useState([]);
-  //   const [species, setSpecies] = useState([]);
-  //   const [starships, setStarships] = useState([]);
-  //   const [vehicles, setVehicles] = useState([]);
-  //   let params = useParams();
-
-  //   console.log("params", params);
-
-  //   const { url } = useRouteMatch();
-  // console.log('useParams',useParams);
-  //   console.log(
-  //         HashRouter,
-  //     Link,
-  //     MemoryRouter,
-  //     Navigate,
-  //     NavigationType,
-  //     Outlet,
-  //     Router,
-  //     createPath,
-  //     createRoutesFromChildren,
-  //     createSearchParams,
-  //     generatePath,
-  //     matchPath,
-  //     matchRoutes,
-  //     parsePath,
-  //     renderMatches,
-  //     resolvePath,
-  //     unstable_HistoryRouter,
-  //     useHref,
-  //     useInRouterContext,
-  //     useLinkClickHandler,
-  //     useLocation,
-  //     useMatch,
-  //     useNavigate,
-  //     useNavigationType,
-  //     useOutlet,
-  //     useOutletContext,
-  //     useParams,
-  //     useResolvedPath,
-  //     useRoutes,
-  //     useSearchParams
-  //   );
-
-  //   useEffect(() => {
-  //     fetchFilms().then((request) => setFilms(request.results));
-  //   }, []);
-  //   useEffect(() => {
-  //     fetchPeople().then((request) => setPeople(request));
-  //   }, []);
-  //   useEffect(() => {
-  //     fetchPlanets().then((request) => setPlanets(request));
-  //   }, []);
-  //   useEffect(() => {
-  //     fetchSpecies().then((request) => setSpecies(request));
-  //   }, []);
-  //   useEffect(() => {
-  //     fetchStarships().then((request) => setStarships(request));
-  //   }, []);
-  //   useEffect(() => {
-  //     fetchVehicles().then((request) => setVehicles(request));
-  //   }, []);
-  //     console.log("films", films);
-  //   console.log("people", people);
-  //   console.log("planets", planets);
-  //   console.log("species", species);
-  //   console.log("starships", starships);
-  //   console.log("vehicles", vehicles);
-  //   console.log("url", url);
-
   const list = [
     { title: "films", img: `${Films}` },
     { title: "people", img: `${People}` },
@@ -133,19 +64,20 @@ export default function Main() {
   ];
 
   return (
-    <ul className={styles.list}>
-      {list &&
-        list.map((item) => {
-          return (
-            <li className={styles.item} key={item.title}>
-              <NavLink to={`/${item.title}`} className={styles.navItem}>
-                {item.title}
-                <img className={styles.img} src={item.img}></img>
-              </NavLink>
-            </li>
-          );
-        })}
-    </ul>
+      <Slider list={list}/>
+    // <ul className={styles.list}>
+    //   {list &&
+    //     list.map((item) => {
+    //       return (
+    //         <li className={styles.item} key={item.title}>
+    //           <NavLink to={`/${item.title}`} className={styles.navItem}>
+    //             {item.title}
+    //             <img className={styles.img} src={item.img}></img>
+    //           </NavLink>
+    //         </li>
+    //       );
+    //     })}
+    // </ul>
   );
 }
 
@@ -169,3 +101,74 @@ export default function Main() {
                     allowFullScreen
                   ></iframe> */
 }
+
+//   const [films, setFilms] = useState([]);
+//   const [people, setPeople] = useState([]);
+//   const [planets, setPlanets] = useState([]);
+//   const [species, setSpecies] = useState([]);
+//   const [starships, setStarships] = useState([]);
+//   const [vehicles, setVehicles] = useState([]);
+//   let params = useParams();
+
+//   console.log("params", params);
+
+//   const { url } = useRouteMatch();
+// console.log('useParams',useParams);
+//   console.log(
+//         HashRouter,
+//     Link,
+//     MemoryRouter,
+//     Navigate,
+//     NavigationType,
+//     Outlet,
+//     Router,
+//     createPath,
+//     createRoutesFromChildren,
+//     createSearchParams,
+//     generatePath,
+//     matchPath,
+//     matchRoutes,
+//     parsePath,
+//     renderMatches,
+//     resolvePath,
+//     unstable_HistoryRouter,
+//     useHref,
+//     useInRouterContext,
+//     useLinkClickHandler,
+//     useLocation,
+//     useMatch,
+//     useNavigate,
+//     useNavigationType,
+//     useOutlet,
+//     useOutletContext,
+//     useParams,
+//     useResolvedPath,
+//     useRoutes,
+//     useSearchParams
+//   );
+
+//   useEffect(() => {
+//     fetchFilms().then((request) => setFilms(request.results));
+//   }, []);
+//   useEffect(() => {
+//     fetchPeople().then((request) => setPeople(request));
+//   }, []);
+//   useEffect(() => {
+//     fetchPlanets().then((request) => setPlanets(request));
+//   }, []);
+//   useEffect(() => {
+//     fetchSpecies().then((request) => setSpecies(request));
+//   }, []);
+//   useEffect(() => {
+//     fetchStarships().then((request) => setStarships(request));
+//   }, []);
+//   useEffect(() => {
+//     fetchVehicles().then((request) => setVehicles(request));
+//   }, []);
+//     console.log("films", films);
+//   console.log("people", people);
+//   console.log("planets", planets);
+//   console.log("species", species);
+//   console.log("starships", starships);
+//   console.log("vehicles", vehicles);
+//   console.log("url", url);
