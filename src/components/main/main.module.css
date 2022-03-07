@@ -1,3 +1,25 @@
+.list{
+    display: flex;
+    width: 90%;
+}
 .item{
+    margin: 10px 20px;
     text-transform: uppercase;
+    background: linear-gradient(45deg, rgba(14, 15, 15, 0.5), rgba(37, 30, 30, 0.5));
+    box-shadow: 8px 8px 10px rgb(22, 22, 22);
+    border-radius: 4px;
+}
+.item:hover .navItem, .item:focus .navItem {
+    transform: scale(1.03);
+}
+.navItem{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all .25s ease;
+    color: aliceblue;
+}
+.img{
+    max-width: 20vw;
 }

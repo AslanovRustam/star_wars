@@ -1,0 +1,11 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.item{
+    text-transform: uppercase;
+    font-family: 'League Gothic';
+    font-size: 5vw;
+}
