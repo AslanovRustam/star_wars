@@ -3,11 +3,11 @@ export default function Dots({ activeIndex, onClick, sliderList }) {
   return (
     <div className={styles.dots}>
       {sliderList.map((sliderItem, index) => (
-        <span
+        <div
           key={index}
-          className={`${activeIndex === index ? "styles.activeDot" : "styles.dot"}`}
+          className={`${activeIndex === index ? styles.activeDot : styles.dot}`}
           onClick={() => onClick(index)}
-        ></span>
+        ></div>
       ))}
     </div>
   );

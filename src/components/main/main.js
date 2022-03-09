@@ -36,21 +36,12 @@ import {
   useSearchParams,
 } from "react-router-dom";
 import styles from "./main.module.css";
-// import {
-//   fetchFilms,
-//   fetchPeople,
-//   fetchPlanets,
-//   fetchSpecies,
-//   fetchStarships,
-//   fetchVehicles,
-// } from "../../api/getFetch";
-import Films from "../../images/films.png";
+import Films from "../../images/films2.jpg";
 import People from "../../images/people.png";
 import Planet from "../../images/planet2.png";
-import Species from "../../images/species.png";
+import Species from "../../images/various.jpg";
 import Starships from "../../images/starships.png";
-import Vehicles from "../../images/military.png";
-// import Vehicles from "../../images/vehicles.png";
+import Vehicles from "../../images/vechicles2.png";
 import Slider from "../slider/slider";
 
 export default function Main() {
@@ -102,73 +93,3 @@ export default function Main() {
                   ></iframe> */
 }
 
-//   const [films, setFilms] = useState([]);
-//   const [people, setPeople] = useState([]);
-//   const [planets, setPlanets] = useState([]);
-//   const [species, setSpecies] = useState([]);
-//   const [starships, setStarships] = useState([]);
-//   const [vehicles, setVehicles] = useState([]);
-//   let params = useParams();
-
-//   console.log("params", params);
-
-//   const { url } = useRouteMatch();
-// console.log('useParams',useParams);
-//   console.log(
-//         HashRouter,
-//     Link,
-//     MemoryRouter,
-//     Navigate,
-//     NavigationType,
-//     Outlet,
-//     Router,
-//     createPath,
-//     createRoutesFromChildren,
-//     createSearchParams,
-//     generatePath,
-//     matchPath,
-//     matchRoutes,
-//     parsePath,
-//     renderMatches,
-//     resolvePath,
-//     unstable_HistoryRouter,
-//     useHref,
-//     useInRouterContext,
-//     useLinkClickHandler,
-//     useLocation,
-//     useMatch,
-//     useNavigate,
-//     useNavigationType,
-//     useOutlet,
-//     useOutletContext,
-//     useParams,
-//     useResolvedPath,
-//     useRoutes,
-//     useSearchParams
-//   );
-
-//   useEffect(() => {
-//     fetchFilms().then((request) => setFilms(request.results));
-//   }, []);
-//   useEffect(() => {
-//     fetchPeople().then((request) => setPeople(request));
-//   }, []);
-//   useEffect(() => {
-//     fetchPlanets().then((request) => setPlanets(request));
-//   }, []);
-//   useEffect(() => {
-//     fetchSpecies().then((request) => setSpecies(request));
-//   }, []);
-//   useEffect(() => {
-//     fetchStarships().then((request) => setStarships(request));
-//   }, []);
-//   useEffect(() => {
-//     fetchVehicles().then((request) => setVehicles(request));
-//   }, []);
-//     console.log("films", films);
-//   console.log("people", people);
-//   console.log("planets", planets);
-//   console.log("species", species);
-//   console.log("starships", starships);
-//   console.log("vehicles", vehicles);
-//   console.log("url", url);

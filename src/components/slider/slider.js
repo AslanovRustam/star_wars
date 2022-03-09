@@ -10,7 +10,7 @@ export default function Slider({ list }) {
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveIndex(activeIndex === length ? 0 : activeIndex + 1);
-    }, 5000);
+    }, 500000);
     return () => clearInterval(interval);
   }, [activeIndex]);
 

@@ -1,8 +1,12 @@
-.container{
+.container, .button{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+.button{
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 .item{
     text-transform: uppercase;

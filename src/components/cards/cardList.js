@@ -13,11 +13,11 @@ export default function CardList() {
     fetchList(cardsList).then((request) => setList(request));
   }, []);
   console.log("list", list);
-  
+
   return (
     <section className={styles.container}>
       <h1 className={styles.item}>{params.collection}</h1>
-      <Card />
+      <Card list={list}/>
     </section>
   );
 }
