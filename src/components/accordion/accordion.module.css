@@ -1,0 +1,49 @@
+h1 {
+    text-align: center;
+    margin: 2rem 0 4rem 0;
+  }
+.accordion {
+    max-width: 600px;
+    margin: 2rem auto;
+    background: whitesmoke;
+    color: black;
+    font-family: 'League Gothic';
+    font-weight: 400;
+    font-size: 3vw;
+  }
+  
+  .title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    cursor: pointer;
+    background-color: whitesmoke;
+  }
+  
+  .title:hover {
+    background-color: #3ab4cc;
+  }
+  
+  .title{
+    padding: 1rem;
+  }
+  
+  .content {
+    background-color: #39b9d2;
+  }
+  .list{
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: column;
+      padding:  0 0.2em;
+  }
+  
+  @media screen and (max-width: 700px) {
+    body {
+      font-size: 18px;
+    }
+  
+    .accordion {
+      width: 90%;
+    }
+  }

@@ -1,15 +1,44 @@
-.container, .button{
+.container, .buttonList{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
-.button{
+.buttonList{
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 .item{
     text-transform: uppercase;
     font-family: 'League Gothic';
     font-size: 5vw;
 }
+.title{
+    font-family: 'League Gothic';
+    font-weight: 400;
+    font-size: 4vw;
+    color: aliceblue;
+}
+.wrapper{
+    width: 100%;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+}
+.button{
+    padding:  0.3em 1em;
+    border-radius: 5%;
+    font-size: 1em;
+    font-family: 'League Gothic';
+    font-weight: 400;
+    border: none;
+    background-color: rgb(243, 180, 8);
+    color: black;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+.button:hover, .button:focus{
+    transform: scale(1.1);
+}
+
