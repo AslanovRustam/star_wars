@@ -1,22 +1,35 @@
 .container {
+  position: relative;
   display: flex;
   justify-content: center;
-  position: relative;
   margin: auto;
   overflow: hidden;
 }
-.active {
-  position: absolute;
-  display: inline-block;
-  transition: all 0.5s cubic-bezier(0.280, -0.315, 0.685, 1.390);
-  /* opacity: 1; */
-  width: auto;
-}
-.inActive {
-  position: relative;
-  opacity: 0;
-  transform: translateX(100vw);
-}
+/* .active {
+    position: absolute;
+    display: inline-block;
+    transition: all 0.5s ease-out;
+    opacity: 1;
+    width: auto;
+    padding: 0 1em;
+    background-color: rgb(243, 180, 8);
+    color: black;
+  }
+  .inActive {
+    position: relative;
+    z-index: -1;
+    color: aliceblue;
+  } */
+  .active:hover, .active:focus, .inActive:hover, .inActive:focus{
+    position: absolute;
+    display: inline-block;
+    transition: all 0.5s ease-out;
+    opacity: 1;
+    width: auto;
+    /* padding: 0 1em; */
+    background-color: rgb(243, 180, 8);
+    color: black;
+  }
 .item {
   margin: 10px 20px;
   text-transform: uppercase;
@@ -40,9 +53,10 @@
   font-family: "League Gothic";
   font-size: 2em;
   transition: all 0.25s ease;
-  color: aliceblue;
+  color: inherit;
   text-transform: uppercase;
 }
+
 .img {
   padding-top: 0.5em;
   object-fit: cover;

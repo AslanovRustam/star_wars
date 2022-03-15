@@ -25,14 +25,12 @@ function goNext(){
   return (
     <div className={styles.wrapper}>
       <div className={styles.buttonList}>
-        <button className={styles.button} type="button">BACK</button>
-        {/* <h2 className={styles.title}>Ther is a list of {cardsList}</h2> */}
-        <button className={styles.button} type="button" onClick={goNext}>FORWARD</button>{" "}
+        {list?.previous &&<button className={styles.button} type="button">BACK</button>}
+        {list?.next &&<button className={styles.button} type="button" onClick={goNext}>NEXT</button>}
       </div>
 
       <ul>
         {list?.results?.map((item, index) => (
-          // <li key={index}>{item.title || item.name}</li>
           <li key={index}><Accordion item={item}/></li>
         ))}
       </ul>

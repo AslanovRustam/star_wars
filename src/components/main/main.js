@@ -56,19 +56,6 @@ export default function Main() {
 
   return (
       <Slider list={list}/>
-    // <ul className={styles.list}>
-    //   {list &&
-    //     list.map((item) => {
-    //       return (
-    //         <li className={styles.item} key={item.title}>
-    //           <NavLink to={`/${item.title}`} className={styles.navItem}>
-    //             {item.title}
-    //             <img className={styles.img} src={item.img}></img>
-    //           </NavLink>
-    //         </li>
-    //       );
-    //     })}
-    // </ul>
   );
 }
 

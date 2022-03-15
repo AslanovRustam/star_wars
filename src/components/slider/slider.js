@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import SliderList from "./sliderList";
+import SliderListV2 from "../sliderv2/sliderlistv2";
 import Dots from "./dots";
 import Arrow from "./arrow";
 import styles from "./slider.module.css";
@@ -17,6 +18,7 @@ export default function Slider({ list }) {
   return (
     <section className={styles.container}>
       <SliderList activeIndex={activeIndex} sliderList={list} />
+      {/* <SliderListV2 activeIndex={activeIndex} sliderList={list} /> */}
       <Arrow
         prevSlide={() =>
           setActiveIndex(activeIndex < 1 ? length : activeIndex - 1)

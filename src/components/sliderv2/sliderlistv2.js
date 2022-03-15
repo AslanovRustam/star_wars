@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
-import styles from "./slider.module.css";
+import styles from "./sliderv2.module.css";
 
-export default function SliderList({ activeIndex, sliderList }) {
+export default function SliderListV2({ activeIndex, sliderList }) {
   return (
     <section className={styles.sliderList}>
       {sliderList.map((item, index) => (
