@@ -4,7 +4,7 @@ h1 {
 }
 .accordion {
   max-width: 600px;
-  margin: 2rem auto;
+  margin: 0.5rem auto;
   color: black;
   font-family: "League Gothic";
   font-weight: 400;
@@ -39,6 +39,8 @@ h1 {
 }
 .contentList {
   composes: content;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .list {
@@ -49,6 +51,14 @@ h1 {
 }
 .titleList{
   background-color: rgb(247, 197, 59);
+}
+.accordionList{
+  border: 1px solid black;
+  margin: 1px;
+  transition: all 0.5s ease-in-out;
+}
+.accordionList:hover, .accordionList:focus{
+  transform: scale(1.1);
 }
 @media screen and (max-width: 700px) {
   body {

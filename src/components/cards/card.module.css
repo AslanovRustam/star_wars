@@ -41,4 +41,7 @@
 .button:hover, .button:focus{
     transform: scale(1.1);
 }
-
+.img{
+    width: 50%;
+    height: auto;
+}
