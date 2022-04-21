@@ -124,26 +124,6 @@ export default function Accordion({ item }) {
               ))}
             </ul>
           )}
-          {/* {item.starships && (
-            <ul className={styles.contentList}>
-              <li className={styles.titleList}>Starships: </li>
-              {item?.starships?.map((starship) => (
-                <li key={starship} className={styles.accordionList}>
-                  <SingleItem dataItem={starship} />
-                </li>
-              ))}
-            </ul>
-          )}
-          {item.vehicles && (
-            <ul className={styles.contentList}>
-              <li className={styles.titleList}>Vehicles: </li>
-              {item?.vehicles?.map((vehicle) => (
-                <li key={vehicle} className={styles.accordionList}>
-                  <SingleItem dataItem={vehicle} />
-                </li>
-              ))}
-            </ul>
-          )} */}
         </div>
       )}
     </div>

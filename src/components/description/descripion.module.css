@@ -1,0 +1,73 @@
+.list {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 0 0.2em;
+  }
+  .content {
+    background-color: rgb(243, 180, 8);
+    color: black;
+    border-radius: 0.1em;
+    margin: 1px;
+  }
+  .container {
+    max-width: 90%;
+    margin: 0.5rem auto;
+    color: aliceblue;
+    font-family: "League Gothic";
+    font-weight: 400;
+    font-size: 3vw;
+  }
+  .title {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-radius: 0.1em;
+    font-size: 6vw;
+    background-color: black;
+    color: aliceblue;
+    animation: bounce 2s infinite ease-in-out;
+  }
+  
+  /* .title:hover, .title:focus{
+    background-color: rgb(243, 180, 8);
+    color: black;
+  } */
+  .contentList {
+    composes: content;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .titleList{
+    background-color: rgb(247, 197, 59);
+  }
+  .loading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.accordionList{
+    border: 1px solid black;
+}
+@keyframes bounce {
+    from {
+      top: 100px;
+      animation-timing-function: ease-out;
+    }
+    25% {
+      top: 50px;
+      animation-timing-function: ease-in;
+    }
+    50% {
+      top: 100px;
+      animation-timing-function: ease-out;
+    }
+    75% {
+      top: 75px;
+      animation-timing-function: ease-in;
+    }
+    to {
+      top: 100px;
+    }
+  }

@@ -20,7 +20,7 @@ export default function CardList() {
       setLoading(false)
     });
   }, []);
-  console.log("list", list);
+  // console.log("list", list);
 
   return (
     <>

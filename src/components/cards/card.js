@@ -4,9 +4,9 @@ import Accordion from "../accordion/accordion";
 import styles from "./card.module.css";
 
 export default function Card({ list }) {
-  let params = useParams();
-  let location = useLocation();
-  console.log('loc',location);
+  // let params = useParams();
+  // let location = useLocation();
+  // // console.log('loc',location);
   let navigate = useNavigate();
   let next = list.next
   console.log('next',next);

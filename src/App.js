@@ -13,10 +13,8 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Main />} />
-        {/* </Route> */}
-        {/* <Route path=":collection" element={<CardList />} /> */}
         <Route path=":collection" element={<CardList />}></Route>
-        <Route path="qwe" element={<Description />} />
+        <Route path=":collection/:id" element={<Description />} />
         <Route element={<NoFoundView />} />
       </Routes>
       <Outlet/>
