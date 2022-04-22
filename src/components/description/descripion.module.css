@@ -11,6 +11,9 @@
     margin: 1px;
   }
   .container {
+      display: flex;
+      flex-direction: column;
+      /* align-items: center; */
     max-width: 90%;
     margin: 0.5rem auto;
     color: aliceblue;
@@ -50,24 +53,21 @@
 .accordionList{
     border: 1px solid black;
 }
-@keyframes bounce {
-    from {
-      top: 100px;
-      animation-timing-function: ease-out;
-    }
-    25% {
-      top: 50px;
-      animation-timing-function: ease-in;
-    }
-    50% {
-      top: 100px;
-      animation-timing-function: ease-out;
-    }
-    75% {
-      top: 75px;
-      animation-timing-function: ease-in;
-    }
-    to {
-      top: 100px;
-    }
-  }
+.button{
+    width: 2em;
+    padding:  0.3em 1em;
+    margin: 1em;
+    border-radius: 5%;
+    text-align: center;
+    font-size: 1em;
+    font-family: 'League Gothic';
+    font-weight: 400;
+    border: none;
+    background-color: rgb(243, 180, 8);
+    color: black;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+.button:hover, .button:focus{
+    transform: scale(1.1);
+}

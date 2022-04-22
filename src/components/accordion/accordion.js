@@ -4,6 +4,7 @@ import styles from "./accordion.module.css";
 
 export default function Accordion({ item }) {
   const [isActive, setIsActive] = useState(false);
+  // console.log('item',item);
   return (
     <div className={styles.accordion}>
       <div className={styles.title} onClick={() => setIsActive(!isActive)}>
@@ -28,7 +29,7 @@ export default function Accordion({ item }) {
           )}
           {item.planets && (
             <ul className={styles.contentList}>
-              <li className={styles.titleList}>Planets : </li>
+              <li className={styles.titleList}>Planets :&nbsp;</li>
               {item?.planets?.map((planet) => (
                 <li key={planet} className={styles.accordionList}>
                   <SingleItem dataItem={planet} />
@@ -38,7 +39,7 @@ export default function Accordion({ item }) {
           )}
           {item.characters && (
             <ul className={styles.contentList}>
-              <li className={styles.titleList}>Characters : </li>
+              <li className={styles.titleList}>Characters :&nbsp;</li>
               {item?.characters?.map((character) => (
                 <li key={character} className={styles.accordionList}>
                   <SingleItem dataItem={character} />
@@ -106,7 +107,7 @@ export default function Accordion({ item }) {
       
           {item.residents && (
             <ul className={styles.contentList}>
-              <li className={styles.titleList}>Residents: </li>
+              <li className={styles.titleList}>Residents :&nbsp;</li>
               {item?.residents?.map((resident) => (
                 <li key={resident} className={styles.accordionList}>
                   <SingleItem dataItem={resident} />
@@ -116,10 +117,20 @@ export default function Accordion({ item }) {
           )}
           {item.films && (
             <ul className={styles.contentList}>
-              <li className={styles.titleList}>Films: </li>
+              <li className={styles.titleList}>Films :&nbsp;</li>
               {item?.films?.map((film) => (
                 <li key={film} className={styles.accordionList}>
                   <SingleItem dataItem={film} />
+                </li>
+              ))}
+            </ul>
+          )}
+                    {item.people && (
+            <ul className={styles.contentList}>
+              <li className={styles.titleList}>People :&nbsp;</li>
+              {item?.people?.map((person) => (
+                <li key={person} className={styles.accordionList}>
+                  <SingleItem dataItem={person} />
                 </li>
               ))}
             </ul>

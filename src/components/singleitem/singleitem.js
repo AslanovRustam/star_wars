@@ -5,7 +5,7 @@ import styles from "./singleitem.module.css";
 import Loading from "../../images/loading.gif";
 
 export default function SingleItem({ dataItem }) {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState({});
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
@@ -18,10 +18,10 @@ export default function SingleItem({ dataItem }) {
 
   // let idFromUrl = parseInt(dataItem.replace(/[^\d]/g, ""));
   const splitef = dataItem.split("/");
-  const category = splitef[4];
+  const collection = splitef[4];
   const id = splitef[5];
   // console.log("dataItem", dataItem);
-  console.log("data", data);
+  // console.log("data", data);
 
 
   return (
@@ -31,7 +31,7 @@ export default function SingleItem({ dataItem }) {
           <img className={styles.img} src={Loading}></img>
         </>
       ) : (
-        <NavLink to={`/${category}/${id}`} className={styles.content}>
+        <NavLink to={`/${collection}/${id}`} className={styles.content}>
           {data.title || data.name}
         </NavLink>
       )}

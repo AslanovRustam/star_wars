@@ -13,3 +13,6 @@ export function fetchList(apiRequest) {
 export function fetchData(apiRequest) {
   return fetchWithErrorHendling(`${apiRequest}/`);
 }
+export function fetchDataPages(apiRequest) {
+  return fetchWithErrorHendling(`${apiRequest}`);
+}
