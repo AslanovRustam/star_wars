@@ -19,7 +19,7 @@ export default function CardList() {
       setList(request);
       setLoading(false)
     });
-  }, []);
+  }, [cardsList]);
   // console.log("list", list);
 
   return (
@@ -27,7 +27,7 @@ export default function CardList() {
     {loading ? (
       <div className={styles.container}>
       <span>Loading...</span>
-      <img className={styles.img} src={Loading}></img>
+      <img className={styles.img} src={Loading} alt='Loading'></img>
 </div>
     ) : (
       <section className={styles.container}>

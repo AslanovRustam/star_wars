@@ -45,7 +45,7 @@ export default function Card({ list }) {
       {loading ? (
         <div className={styles.container}>
           <span>Loading...</span>
-          <img className={styles.img} src={Loading}></img>
+          <img className={styles.img} src={Loading} alt='Loading'></img>
         </div>
       ) : (
         <ul>

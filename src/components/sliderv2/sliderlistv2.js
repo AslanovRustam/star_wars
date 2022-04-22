@@ -8,7 +8,7 @@ export default function SliderListV2({ activeIndex, sliderList }) {
         <div className={index === activeIndex ? styles.active: styles.inActive} key={index}>
           <NavLink to={`/${item.title}`} className={styles.navItem}>
             {item.title}
-            <img className={styles.img} src={item.img}></img>
+            <img className={styles.img} src={item.img} alt='some picture'></img>
           </NavLink>
         </div>
       ))}

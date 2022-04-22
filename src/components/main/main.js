@@ -1,4 +1,3 @@
-import styles from "./main.module.css";
 import Films from "../../images/films2.jpg";
 import People from "../../images/people.png";
 import Planet from "../../images/planet2.png";

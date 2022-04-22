@@ -28,7 +28,7 @@ export default function SingleItem({ dataItem }) {
     <>
       {loading ? (
         <>
-          <img className={styles.img} src={Loading}></img>
+          <img className={styles.img} src={Loading} alt='Loading'></img>
         </>
       ) : (
         <NavLink to={`/${collection}/${id}`} className={styles.content}>

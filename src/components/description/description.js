@@ -28,7 +28,7 @@ export default function Description() {
       {loading ? (
         <div className={styles.loading}>
           <span>Loading...</span>
-          <img className={styles.img} src={Loading}></img>
+          <img className={styles.img} src={Loading} alt='Loading'></img>
         </div>
       ) : (
         <section className={styles.container}>
