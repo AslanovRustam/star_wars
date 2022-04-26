@@ -1,20 +1,7 @@
-import Films from "../../images/films2.jpg";
-import People from "../../images/people.png";
-import Planet from "../../images/planet2.png";
-import Species from "../../images/various.jpg";
-import Starships from "../../images/starships.png";
-import Vehicles from "../../images/vechicles2.png";
 import Slider from "../slider/slider";
 
-export default function Main() {
-  const list = [
-    { title: "films", img: `${Films}` },
-    { title: "people", img: `${People}` },
-    { title: "planets", img: `${Planet}` },
-    { title: "species", img: `${Species}` },
-    { title: "starships", img: `${Starships}` },
-    { title: "vehicles", img: `${Vehicles}` },
-  ];
+export default function Main({list}) {
+
 
   return (
       <Slider list={list}/>
