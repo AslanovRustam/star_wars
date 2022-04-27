@@ -9,7 +9,6 @@
   position: absolute;
   display: inline-block;
   transition: all 0.5s cubic-bezier(0.280, -0.315, 0.685, 1.390);
-  /* opacity: 1; */
   width: auto;
 }
 .inActive {
@@ -66,10 +65,8 @@
 .next:hover,
 .next:focus {
   transform: scale(1.1);
-  /* background-color: rgba(82, 76, 76, 0.5); */
   background-color:  rgba(243, 180, 8, 0.3);
   border-radius: 8px;
-  /* height: 10%; */
 }
 .prev {
   left: 0;
@@ -79,13 +76,13 @@
 }
 .dots {
   width: 100%;
-  height: 100%;
   position: absolute;
   display: flex;
-  top: 90%;
+  top: 95%;
   justify-content: center;
-  /* z-index: 101; */
+  align-items: center;
 }
+
 .dot,
 .activeDot {
   cursor: pointer;
@@ -93,13 +90,15 @@
   width: 1.5rem;
   margin: 0 3px;
   background-color: rgba(151, 148, 148, 0.3);
-  /* border-radius: 50%; */
   display: inline-block;
   transition: all 0.5s ease-out;
 }
 .dot:hover,
 .dot:focus,
 .activeDot {
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
   background-color: rgba(243, 180, 8, 0.3);
   transform: scale(1.3);
 }

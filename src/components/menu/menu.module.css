@@ -55,7 +55,7 @@
           width: 100%;
       }
       .blur{
-          backdrop-filter: none;
+          display: none;
       }
       .logo{
         width: 40vw;
