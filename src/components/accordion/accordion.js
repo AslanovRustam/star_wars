@@ -1,18 +1,26 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import SingleItem from "../singleitem/singleitem";
 import styles from "./accordion.module.css";
 
 export default function Accordion({ item }) {
   const [isActive, setIsActive] = useState(false);
+  const [height, setIHeight] = useState("0px");
+  const content = useRef(null)
+
+function toggleAccordion(){
+  setIsActive(!isActive);
+  setIHeight(isActive?"0px" :`${content.current.scrollHeight}px`)
+  // console.log('content.current.scrollHeight',content.current.scrollHeight);
+}
   // console.log('item',item);
   return (
     <div className={styles.accordion}>
-      <div className={styles.title} onClick={() => setIsActive(!isActive)}>
+      <div className={styles.title} onClick={toggleAccordion}>
         <div>{item.title || item.name}</div>
         <div>{isActive ? "-" : "+"}</div>
       </div>
-      {isActive && (
-        <div className={styles.list}>
+      {/* //////REF и max-height!!!///// */}
+        <div ref={content} style={{maxHeight:`${height}`}} className={styles.list}>
           {item.director && (
             <span className={styles.content}> Director : {item.director}</span>
           )}
@@ -136,7 +144,7 @@ export default function Accordion({ item }) {
             </ul>
           )}
         </div>
-      )}
+      {/* //  )}  */}
     </div>
   );
 }

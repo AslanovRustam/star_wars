@@ -6,7 +6,7 @@ export default function Menu({ list, active, setActive }) {
   return (
     <div className={active ? styles.menuActive : styles.menu} onClick={() => setActive(!active)}>
       <div className={styles.blur}></div>
-      <div className={styles.content}>
+      <div className={styles.content} >
         <NavLink to="/">
           <img className={styles.logo} src={logo} alt="logo"></img>
         </NavLink>

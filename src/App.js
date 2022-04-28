@@ -6,7 +6,7 @@ import CardList from "./components/cards/cardList";
 import NoFoundView from "./components/404/noFoundView";
 import Description from "./components/description/description";
 import Films from "./images/films2.jpg";
-import People from "./images/people.png";
+import People from "./images/people3.jpg";
 import Planet from "./images/planet2.png";
 import Species from "./images/various.jpg";
 import Starships from "./images/starships.png";

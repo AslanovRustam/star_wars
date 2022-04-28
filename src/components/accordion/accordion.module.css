@@ -48,6 +48,9 @@ h1 {
   justify-content: flex-start;
   flex-direction: column;
   padding: 0 0.2em;
+  /* max-height: 0; */
+  overflow: hidden;
+  transition: max-height 0.6s ease;
 }
 .titleList{
   background-color: rgb(247, 197, 59);

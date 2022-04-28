@@ -44,5 +44,5 @@ ul, ol, h1, h2, h3, a{
   padding: 0;
 }
 #root{
-  cursor: url(./images/cursor2.png)39px 39px, auto;
+  cursor: url(./images/cursor2.png) 39px, auto;
 }
