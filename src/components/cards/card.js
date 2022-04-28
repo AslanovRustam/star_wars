@@ -57,8 +57,7 @@ export default function Card({ list }) {
         </ul>
       )}
       <NavLink to="/" className={styles.button}>
-        {" "}
-        Back
+         Back to home
       </NavLink>
     </div>
   );

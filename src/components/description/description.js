@@ -240,7 +240,7 @@ export default function Description() {
               </ul>
             )}
           </div>
-          <NavLink to={`/${collection}`} className={styles.button}> Back</NavLink>
+          <NavLink to={`/${collection}`} className={styles.button}> Back to {collection}</NavLink>
         </section>
       )}
     </>
