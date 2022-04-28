@@ -4,6 +4,7 @@
   position: relative;
   margin: auto;
   overflow: hidden;
+  padding-bottom: 2em;
 }
 .active {
   position: absolute;
@@ -116,4 +117,30 @@
 .sliderList {
   display: flex;
   justify-content: center;
+}
+@media screen and (max-width: 768px) {
+.arrows{
+  display: none;
+}
+.dots{
+  display: none;
+}
+.sliderList{
+  flex-direction: column;
+  overflow: visible;
+}
+.active {
+  position: relative;
+}
+.inActive {
+  opacity: 1;
+  transform: translateX(0);
+}
+.navItem{
+  font-size: 2em;
+}
+.img{
+  object-fit: contain;
+  height: auto;
+}
 }
