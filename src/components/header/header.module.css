@@ -24,3 +24,8 @@ font-family: "League Gothic";
     margin: 1vw;
     cursor: pointer;
 }
+@media screen and (max-width: 768px) {
+    .logo{
+        width: 20vw;
+    }
+  }
