@@ -75,3 +75,12 @@
   width: 50%;
   height: auto;
 }
+@media screen and (max-width: 700px) {
+
+  .title{
+    font-size: 4em;
+  }
+  .content{
+    font-size: 2em;
+  }
+}
