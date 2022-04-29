@@ -8,10 +8,10 @@ async function fetchWithErrorHendling(url = "", config = {}) {
 }
 
 export function fetchList(apiRequest) {
-  return fetchWithErrorHendling(`${baseUrl}${apiRequest}/`);
+  return fetchWithErrorHendling(`${baseUrl}${apiRequest}`);
 }
 export function fetchData(apiRequest) {
-  return fetchWithErrorHendling(`${apiRequest}/`);
+  return fetchWithErrorHendling(`${apiRequest}`);
 }
 export function fetchDataPages(apiRequest) {
   return fetchWithErrorHendling(`${apiRequest}`);
