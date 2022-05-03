@@ -46,3 +46,21 @@ ul, ol, h1, h2, h3, a{
 #root{
   cursor: url(./images/cursor2.png) 39px, auto;
 }
+.swiper-pagination-bullet{
+  cursor: pointer;
+    height: 0.5rem;
+    width: 3.5rem;
+    margin: 0 3px;
+    border-radius: 1%;
+    background-color: rgba(151, 148, 148, 0.3);
+    display: inline-block;
+    transition: all 0.5s ease-out;
+}
+/* .swiper-pagination-bullet:hover,
+.swiper-pagination-bullet:focus {
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  background-color: rgba(243, 180, 8, 0.3);
+  transform: scale(1.3);
+} */
