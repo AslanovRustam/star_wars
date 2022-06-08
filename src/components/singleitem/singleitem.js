@@ -20,9 +20,6 @@ export default function SingleItem({ dataItem }) {
   const splitef = dataItem.split("/");
   const collection = splitef[4];
   const id = splitef[5];
-  // console.log("dataItem", dataItem);
-  // console.log("data", data);
-
 
   return (
     <>

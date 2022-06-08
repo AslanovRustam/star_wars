@@ -16,3 +16,6 @@ export function fetchData(apiRequest) {
 export function fetchDataPages(apiRequest) {
   return fetchWithErrorHendling(`${apiRequest}`);
 }
+export function fetchCategory() {
+  return fetchWithErrorHendling(baseUrl);
+}

@@ -9,9 +9,9 @@
   color: aliceblue;
   text-transform: uppercase;
   height: 100%;
-width: 100%;
+  width: 100%;
 }
-.inActiveNavItem{
+.inActiveNavItem {
   composes: navItem;
   font-size: 1em;
 }
@@ -22,16 +22,16 @@ width: 100%;
   height: 65vh;
   transform: translateZ(40px) scale(0.8);
 }
-.tilt{
+.tilt {
   margin: 0.5em;
   transform-style: preserve-3d;
   transform: perspective(1000px);
-  background-image: url('../../images/universe.jpg');
-  background-size:cover;
+  background-image: url("../../images/universe.jpg");
+  background-size: cover;
   box-shadow: inset 0 0 1em 1em rgba(15, 15, 15, 0.9);
 }
 
-.sliderList{
+.sliderList {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -43,33 +43,33 @@ width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  width: 100vw;
+  /* height: 100%; */
   transition: all 0.5s ease-in-out;
 }
 
 @media screen and (max-width: 768px) {
-
-.sliderList{
-  flex-direction: column;
-  overflow: visible;
-}
-.active {
-  position: relative;
-}
-.inActive {
-  /* opacity: 1;
-  transform: translateX(0); */
-  width: auto;
-}
-.navItem{
-  font-size: 2em;
-}
-.img{
-  object-fit: contain;
-  height: auto;
-  width: 100%;
-}
-.window{
-  flex-direction: column;
-}
+  .sliderList {
+    flex-direction: column;
+    overflow: visible;
+  }
+  .active {
+    position: relative;
+  }
+  .inActive {
+    /* opacity: 1;
+    transform: translateX(0); */
+    width: auto;
+  }
+  .navItem {
+    font-size: 2em;
+  }
+  .img {
+    object-fit: contain;
+    height: auto;
+    width: 100%;
+  }
+  .window {
+    flex-direction: column;
+  }
 }

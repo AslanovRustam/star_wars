@@ -1,9 +1,9 @@
 .container {
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
+  /* overflow: hidden; */
   position: relative;
   margin: auto;
-  overflow: hidden;
   padding-bottom: 2em;
 }
 .active {
@@ -76,7 +76,7 @@
 .prev:focus,
 .next:hover,
 .next:focus {
-  transform: scale(1.1);
+  /* transform: scale(1.1); */
   background-color:  rgba(243, 180, 8, 0.3);
   border-radius: 8px;
 }
@@ -142,5 +142,8 @@
 .img{
   object-fit: contain;
   height: auto;
+}
+.container {
+  justify-content: center;
 }
 }

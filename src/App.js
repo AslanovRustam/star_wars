@@ -5,12 +5,12 @@ import Footer from "./components/footer/footer";
 import CardList from "./components/cards/cardList";
 import NoFoundView from "./components/404/noFoundView";
 import Description from "./components/description/description";
-import Films from "./images/films2.jpg";
+import Films from "./images/films3.jpg";
 import People from "./images/people3.jpg";
-import Planet from "./images/planet2.png";
+import Planet from "./images/planet4.jpg";
 import Species from "./images/various.jpg";
-import Starships from "./images/starships.png";
-import Vehicles from "./images/vechicles2.png";
+import Starships from "./images/starships3.jpg";
+import Vehicles from "./images/vehicles3.jpg";
 import "./App.css";
 
 const list = [
@@ -28,9 +28,9 @@ function App() {
       <Header list={list} />
       <Routes>
         <Route path="/" element={<Main list={list}/>} />
-        <Route path=":collection" element={<CardList />}></Route>
+        <Route path=":collection" element={<CardList />}/>
         <Route path=":collection/:id" element={<Description />} />
-        <Route element={<NoFoundView />} />
+        <Route  path="*" element={<NoFoundView />} />
       </Routes>
       <Outlet/>
       <Footer />

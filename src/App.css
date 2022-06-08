@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -30,14 +30,14 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
 
 body{
   color: aliceblue;
   background-image: url(./images/star-wars-background.jpg);
 /* background-image: url(./images/3d-star-wars.jpg); */
 }
-ul, ol, h1, h2, h3, a{
+ul, ol, h1, h2, h3, a, p{
   text-decoration: none;
   list-style: none;
   margin: 0;

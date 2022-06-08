@@ -1,0 +1,44 @@
+.container {
+  /* position: relative;
+  left: 50%; */
+}
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  transition: all 0.25s ease;
+  left: 50%;
+
+}
+.input {
+  margin: 0.5em;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-family: "League Gothic";
+  font-size: 1em;
+  color: aliceblue;
+  background-color: transparent;
+  border: 0.2em solid rgba(243, 180, 8, 0.5);
+  transition: all 0.3s ease-in-out;
+}
+.input:hover,
+.input:focus,
+.input:active {
+  background-color: rgba(243, 180, 8, 1);
+  color: black;
+}
+.queryList {
+    position: absolute;
+    right: 1em;
+  /* width: auto; */
+  /* height: auto; */
+  /* max-width: 20vw; */
+  max-height: 90vh;
+  color: black;
+  background-color: aliceblue;
+  z-index: 1;
+  overflow-y: auto;
+  text-overflow: ellipsis;
+  overflow-x: hidden;
+}
