@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useParams, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { fetchCategory, fetchData } from "../../api/getFetch";
 import styles from "./search.module.css";
 import Loading from "../../images/loadingBig2.gif";
@@ -25,40 +25,17 @@ export default function Search() {
       setLoading(false);
     });
   }, []);
-  // console.log("list", list);
 
-  // function GetData(url, results) {
-  //   fetchData(url).then((request) => {
-  //     results.push(...request.results);
-  //     if (request.next) {
-  //       GetData(request.next, results);
-  // console.log("results", results);
-
-  //     }
-  //     setDataforSearch(results);
-  //   });
-  // }
   function GetData(item, results) {
     fetchData(item[1]).then((request) => {
       results[item[0]].push(...request.results);
       if (request.next) {
         GetData([item[0], request.next], results);
-        // console.log("results", results);
       }
       setDataforSearch(results);
     });
   }
-  // useEffect(() => {
-  //   const results = [];
-  //   Object.values(list).map((item) => GetData(item, results));
-  // }, [list]);
-  // useEffect(() => {
-  //   const results=[];
-  //       Object.entries(list).map((item) => {
-  //     console.log("item", item);
-  //     GetData(item, results);
-  //   });
-  // }, [list]);
+
   useEffect(() => {
     const results = {
       films: [],
@@ -69,12 +46,10 @@ export default function Search() {
       vehicles: [],
     };
     Object.entries(list).map((item) => {
-      // console.log("item", item);
       GetData(item, results);
     });
   }, [list]);
-  //
-  // function FindMatch() {
+
   useEffect(() => {
     if (inputSearch === "") {
       setFilteredData({
@@ -93,14 +68,16 @@ export default function Search() {
         const findText = inputSearch.toLocaleLowerCase();
         return title.indexOf(findText) >= 0;
       });
-      setFilteredData((filteredData[el] = filteredList));
-      console.log("filteredData", filteredData);
+      setFilteredData((prevFilter) => ({ ...prevFilter, [el]: filteredList }));
     }
-  console.log("filteredData in useEff", filteredData);
-    // setFilteredData(filteredList);
   }, [inputSearch]);
-  console.log("filteredData", filteredData);
-  // console.log("dataforSearch.films", dataforSearch.films);
+
+  function ItemUrl(item) {
+    const splitef = item.url.split("/");
+    const collection = splitef[4];
+    const id = splitef[5];
+    return `${collection}/${id}`;
+  }
 
   // useEffect(() => {
   //   if (inputSearch === "") {
@@ -115,9 +92,7 @@ export default function Search() {
   //   setFilteredData(filteredList);
   // }, [inputSearch]);
   // }
-  // console.log("inputSearch in FindData", inputSearch);
-  // console.log("filteredData", filteredData);
-  // console.log('dataforSearch',dataforSearch);
+
   return (
     <div className={styles.container}>
       <label className={styles.search}>
@@ -130,17 +105,41 @@ export default function Search() {
       </label>
       <ul className={styles.queryList}>
         {filteredData.films.map((item) => (
-          <li key={item.name || item.title}>
+          <li key={item.name || item.title} className={styles.item}>
             {" "}
-            <NavLink to={`qwe`}>{item.name || item.title} </NavLink>
+            <NavLink to={ItemUrl(item)} className={styles.queryItem}>{item.name || item.title} </NavLink>
           </li>
         ))}
-        {/* {filteredData.map((item) => (
-          <li key={item.name || item.title}>
+        {filteredData.people.map((item, index) => (
+          <li key={item.name || item.title}  className={styles.item}>
             {" "}
-            <NavLink to={`qwe`}>{item.name || item.title} </NavLink>
+            <NavLink to={ItemUrl(item)} className={styles.queryItem}>{item.name || item.title} </NavLink>
           </li>
-        ))} */}
+        ))}
+        {filteredData.planets.map((item, index) => (
+          <li key={item.name || item.title}  className={styles.item}>
+            {" "}
+            <NavLink to={ItemUrl(item)} className={styles.queryItem}>{item.name || item.title} </NavLink>
+          </li>
+        ))}
+        {filteredData.species.map((item, index) => (
+          <li key={item.name || item.title}  className={styles.item}>
+            {" "}
+            <NavLink to={ItemUrl(item)} className={styles.queryItem}>{item.name || item.title} </NavLink>
+          </li>
+        ))}
+        {filteredData.starships.map((item, index) => (
+          <li key={item.name || item.title}  className={styles.item}>
+            {" "}
+            <NavLink to={ItemUrl(item)} className={styles.queryItem}>{item.name || item.title} </NavLink>
+          </li>
+        ))}
+        {filteredData.vehicles.map((item, index) => (
+          <li key={item.name || item.title}  className={styles.item}>
+            {" "}
+            <NavLink to={ItemUrl(item)} className={styles.queryItem}>{item.name || item.title} </NavLink>
+          </li>
+        ))}
       </ul>
     </div>
   );

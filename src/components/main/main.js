@@ -1,10 +1,12 @@
 import Slider from "../slider/slider";
+import Search from "../search/search";
 
-export default function Main({list}) {
-
-
+export default function Main({ list }) {
   return (
-      <Slider list={list}/>
+    <>
+      <Search />
+      <Slider list={list} />
+    </>
   );
 }
 
@@ -28,4 +30,3 @@ export default function Main({list}) {
                     allowFullScreen
                   ></iframe> */
 }
-

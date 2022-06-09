@@ -16,7 +16,7 @@ export default function Header({ list }) {
         onClick={() => setMenuActive(!menuActive)}
       ></img>
       <Menu list={list} active={menuActive} setActive={setMenuActive} />
-      <Search/>
+      {/* <Search/> */}
     </header>
   );
 }

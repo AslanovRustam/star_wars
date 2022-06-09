@@ -1,6 +1,9 @@
 .container {
-  /* position: relative;
-  left: 50%; */
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
 }
 .search {
   display: flex;
@@ -8,8 +11,8 @@
   align-items: center;
   text-transform: uppercase;
   transition: all 0.25s ease;
-  left: 50%;
-
+  /* left: 50%; */
+  top: 0;
 }
 .input {
   margin: 0.5em;
@@ -29,16 +32,49 @@
   color: black;
 }
 .queryList {
-    position: absolute;
-    right: 1em;
-  /* width: auto; */
-  /* height: auto; */
-  /* max-width: 20vw; */
-  max-height: 90vh;
-  color: black;
-  background-color: aliceblue;
-  z-index: 1;
+  width: auto;
+  max-height: 50vh;
+  color: aliceblue;
+  background-color: rgba(12, 12, 12, 0.8);
   overflow-y: auto;
   text-overflow: ellipsis;
   overflow-x: hidden;
 }
+.queryList::-webkit-scrollbar {
+  width: 0.5em;
+ }
+.queryList::-webkit-scrollbar-track {
+  background-color: rgba(12, 12, 12, 0.8);
+}
+.queryList::-webkit-scrollbar-thumb {
+  background-color: rgba(247, 197, 59, 0.5);
+  border-radius: 0.2em;
+  transition: all 2s ease-in-out;
+}
+.queryList::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(247, 197, 59, 1);
+  transition: all 2s ease-in-out;
+}
+.queryList::-webkit-scrollbar-track-piece{
+    width: 1px;
+    height: 50px;
+}
+.queryItem {
+  font-weight: 500;
+  font-family: "League Gothic";
+  font-size: 2em;
+  color: aliceblue;
+}
+.item,
+.queryItem {
+  transition: all 0.5s ease-in-out;
+}
+.item:hover .queryItem,
+.item:focus .queryItem {
+  color: black;
+}
+.item:hover,
+.item:focus {
+  background-color: rgb(247, 197, 59);
+}
+/* rgb(247, 197, 59) */
