@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/star_wars/static/css/main.59a07a1a.css",
-    "main.js": "/star_wars/static/js/main.b14f9ee3.js",
+    "main.css": "/star_wars/static/css/main.8d4009a5.css",
+    "main.js": "/star_wars/static/js/main.2328390a.js",
     "static/js/787.161ebaff.chunk.js": "/star_wars/static/js/787.161ebaff.chunk.js",
     "static/media/loadingBig2.gif": "/star_wars/static/media/loadingBig2.c35ec855e66367233605.gif",
     "static/media/people3.jpg": "/star_wars/static/media/people3.7645f55fe049c3a321b7.jpg",
-    "static/media/vechicles2.png": "/star_wars/static/media/vechicles2.9d47f95c167399de24f9.png",
     "static/media/universe.jpg": "/star_wars/static/media/universe.7c300848e0ecc9a755dc.jpg",
-    "static/media/starships.png": "/star_wars/static/media/starships.c10a74f3f504e6c06a19.png",
-    "static/media/planet2.png": "/star_wars/static/media/planet2.3395b5ecf3914e0eb386.png",
-    "static/media/films2.jpg": "/star_wars/static/media/films2.50268e56b7fcb867b5eb.jpg",
+    "static/media/planet4.jpg": "/star_wars/static/media/planet4.ba48be5c751099b34ad8.jpg",
+    "static/media/films3.jpg": "/star_wars/static/media/films3.5137ec67c88475f31af1.jpg",
+    "static/media/starships3.jpg": "/star_wars/static/media/starships3.7fc68cddac672e0d0cff.jpg",
+    "static/media/vehicles3.jpg": "/star_wars/static/media/vehicles3.6fef1f254e0bf4b19c50.jpg",
     "static/media/various.jpg": "/star_wars/static/media/various.f8c3805fcc4c63330383.jpg",
     "static/media/star-wars-background.jpg": "/star_wars/static/media/star-wars-background.b211fc0645e20fb74453.jpg",
     "static/media/logo.png": "/star_wars/static/media/logo.23037d122e36f6d0b71a.png",
     "static/media/cursor2.png": "/star_wars/static/media/cursor2.2ba533a3a4775cd0e84b.png",
     "static/media/loading.gif": "/star_wars/static/media/loading.a1a996746e5e48352c81.gif",
     "index.html": "/star_wars/index.html",
-    "main.59a07a1a.css.map": "/star_wars/static/css/main.59a07a1a.css.map",
-    "main.b14f9ee3.js.map": "/star_wars/static/js/main.b14f9ee3.js.map",
+    "main.8d4009a5.css.map": "/star_wars/static/css/main.8d4009a5.css.map",
+    "main.2328390a.js.map": "/star_wars/static/js/main.2328390a.js.map",
     "787.161ebaff.chunk.js.map": "/star_wars/static/js/787.161ebaff.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.59a07a1a.css",
-    "static/js/main.b14f9ee3.js"
+    "static/css/main.8d4009a5.css",
+    "static/js/main.2328390a.js"
   ]
 }
