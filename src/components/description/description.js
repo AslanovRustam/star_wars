@@ -4,7 +4,6 @@ import { fetchList } from "../../api/getFetch";
 import Loading from "../../images/loadingBig2.gif";
 import SingleItem from "../singleitem/singleitem";
 import styles from "./descripion.module.css";
-// import Card from "./card";
 
 export default function Description() {
   let params = useParams();
@@ -21,7 +20,6 @@ export default function Description() {
       setLoading(false);
     });
   }, [id, collection]);
-  // console.log("data", data);
 
   return (
     <>

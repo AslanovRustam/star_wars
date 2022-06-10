@@ -27,6 +27,7 @@ export default function Search() {
   }, []);
 
   function GetData(item, results) {
+    setLoading(true);
     fetchData(item[1]).then((request) => {
       results[item[0]].push(...request.results);
       if (request.next) {
@@ -34,6 +35,7 @@ export default function Search() {
       }
       setDataforSearch(results);
     });
+    setLoading(false)
   }
 
   useEffect(() => {
@@ -79,22 +81,10 @@ export default function Search() {
     return `${collection}/${id}`;
   }
 
-  // useEffect(() => {
-  //   if (inputSearch === "") {
-  //     setFilteredData([]);
-  //     return;
-  //   }
-  //   const filteredList = dataforSearch.filter((item) => {
-  //     const title = (item.name || item.title).toLocaleLowerCase();
-  //     const findText = inputSearch.toLocaleLowerCase();
-  //     return title.indexOf(findText) >= 0;
-  //   });
-  //   setFilteredData(filteredList);
-  // }, [inputSearch]);
-  // }
-
   return (
-    <div className={styles.container}>
+    <>
+    {loading ? (<div>Loading data...</div>):(
+    <div className={styles.container} >
       <label className={styles.search}>
         <input
           className={styles.input}
@@ -103,58 +93,86 @@ export default function Search() {
           placeholder="find the way"
         ></input>
       </label>
-      <ul className={styles.queryList}>
-        {filteredData.films.map((item) => (
-          <li key={item.name || item.title} className={styles.item}>
-            {" "}
-            <NavLink to={ItemUrl(item)} className={styles.queryItem}>{item.name || item.title} </NavLink>
-          </li>
-        ))}
-        {filteredData.people.map((item, index) => (
-          <li key={item.name || item.title}  className={styles.item}>
-            {" "}
-            <NavLink to={ItemUrl(item)} className={styles.queryItem}>{item.name || item.title} </NavLink>
-          </li>
-        ))}
-        {filteredData.planets.map((item, index) => (
-          <li key={item.name || item.title}  className={styles.item}>
-            {" "}
-            <NavLink to={ItemUrl(item)} className={styles.queryItem}>{item.name || item.title} </NavLink>
-          </li>
-        ))}
-        {filteredData.species.map((item, index) => (
-          <li key={item.name || item.title}  className={styles.item}>
-            {" "}
-            <NavLink to={ItemUrl(item)} className={styles.queryItem}>{item.name || item.title} </NavLink>
-          </li>
-        ))}
-        {filteredData.starships.map((item, index) => (
-          <li key={item.name || item.title}  className={styles.item}>
-            {" "}
-            <NavLink to={ItemUrl(item)} className={styles.queryItem}>{item.name || item.title} </NavLink>
-          </li>
-        ))}
-        {filteredData.vehicles.map((item, index) => (
-          <li key={item.name || item.title}  className={styles.item}>
-            {" "}
-            <NavLink to={ItemUrl(item)} className={styles.queryItem}>{item.name || item.title} </NavLink>
-          </li>
-        ))}
-      </ul>
+        <div className={styles.queryList}>
+        {filteredData.films.length > 0 ? (
+          <>
+            FILMS:
+            {filteredData.films.map((item) => (
+              <div key={item.name || item.title} className={styles.item}>
+                <NavLink to={ItemUrl(item)} className={styles.queryItem}>
+                  {item.name || item.title}{" "}
+                </NavLink>
+              </div>
+            ))}
+          </>
+        ) : ("")}
+        {filteredData.people.length > 0 ? (
+          <>
+            PEOPLE
+            {filteredData.people.map((item, index) => (
+              <div key={item.name || item.title} className={styles.item}>
+                <NavLink to={ItemUrl(item)} className={styles.queryItem}>
+                  {item.name || item.title}{" "}
+                </NavLink>
+              </div>
+            ))}
+          </>
+        ) : ("")}
+        {filteredData.planets.length > 0 ? (
+          <>
+            PLANETS:
+            {filteredData.planets.map((item, index) => (
+              <div key={item.name || item.title} className={styles.item}>
+                <NavLink to={ItemUrl(item)} className={styles.queryItem}>
+                  {item.name || item.title}{" "}
+                </NavLink>
+              </div>
+            ))}
+          </>
+        ) : ( "" )}
+        {filteredData.species.length > 0 ? (
+          <>
+            SPECIES:
+            {filteredData.species.map((item, index) => (
+              <div key={item.name || item.title} className={styles.item}>
+                <NavLink to={ItemUrl(item)} className={styles.queryItem}>
+                  {item.name || item.title}{" "}
+                </NavLink>
+              </div>
+            ))}
+          </>
+        ) : ( "" )}
+        {filteredData.starships.length > 0 ? (
+          <>
+            STARSHIPS:
+            {filteredData.starships.map((item, index) => (
+              <div key={item.name || item.title} className={styles.item}>
+                <NavLink to={ItemUrl(item)} className={styles.queryItem}>
+                  {item.name || item.title}{" "}
+                </NavLink>
+              </div>
+            ))}
+          </>
+        ) : ( "" )}
+        {filteredData.vehicles.length > 0 ? (
+          <>
+            VEHICLES:
+            {filteredData.vehicles.map((item, index) => (
+              <div key={item.name || item.title} className={styles.item}>
+                <NavLink to={ItemUrl(item)} className={styles.queryItem}>
+                  {item.name || item.title}{" "}
+                </NavLink>
+              </div>
+            ))}
+          </>
+        ) : ( "" )}
+      </div>     
     </div>
+    )}
+    </>
   );
 }
 
-{
-  /* {loading ? (
-  <div className={styles.container}>
-  <span>Loading...</span>
-  <img className={styles.img} src={Loading} alt='Loading'></img>
-</div>
-) : (
-  <section className={styles.container}>
-  <h1 className={styles.item}>{params.collection}</h1>
-  <Card list={list}/>
-</section>
-)} */
-}
+
+
+

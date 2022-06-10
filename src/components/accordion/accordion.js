@@ -12,7 +12,6 @@ function toggleAccordion(){
   setIHeight(isActive?"0px" :`${content.current.scrollHeight}px`)
   // console.log('content.current.scrollHeight',content.current.scrollHeight);
 }
-  // console.log('item',item);
   return (
     <div className={styles.accordion}>
       <div className={styles.title} onClick={toggleAccordion}>
@@ -144,7 +143,6 @@ function toggleAccordion(){
             </ul>
           )}
         </div>
-      {/* //  )}  */}
     </div>
   );
 }

@@ -39,6 +39,10 @@
   overflow-y: auto;
   text-overflow: ellipsis;
   overflow-x: hidden;
+  font-weight: 500;
+  font-family: "League Gothic";
+  font-size: 2em;
+  color: rgb(247, 197, 59, 1);
 }
 .queryList::-webkit-scrollbar {
   width: 0.5em;
@@ -62,7 +66,7 @@
 .queryItem {
   font-weight: 500;
   font-family: "League Gothic";
-  font-size: 2em;
+  font-size: 0.8em;
   color: aliceblue;
 }
 .item,
