@@ -24,6 +24,10 @@ font-family: "League Gothic";
     width: 10vw;
     margin: 1vw;
     cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.logo:hover, .logo.focus{
+    filter: brightness(1) drop-shadow(0 0 4px rgba(243, 180, 8, 1));
 }
 @media screen and (max-width: 768px) {
     .logo{
