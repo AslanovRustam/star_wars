@@ -39,3 +39,4 @@ function App() {
 }
 
 export default App;
+// "homepage": "https://AslanovRustam.github.io/star_wars",

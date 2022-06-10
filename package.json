@@ -1,7 +1,7 @@
 {
   "name": "star_wars",
   "version": "0.1.0",
-  "homepage": "./",
+  "homepage": "https://AslanovRustam.github.io/star_wars",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.2",
