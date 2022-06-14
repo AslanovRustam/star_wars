@@ -3,7 +3,7 @@ body{
   color: aliceblue;
   background-image: url(./images/star-wars-background.jpg);
 /* background-image: url(./images/3d-star-wars.jpg); */
-overflow: hidden;
+overflow-x: hidden;
 }
 body::after{
   content: '';
