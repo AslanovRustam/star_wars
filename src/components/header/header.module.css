@@ -1,36 +1,63 @@
-.container, .list{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    /* position: absolute; */
+.container,
+.list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* position: absolute; */
 }
-.list{
-    flex-direction: column;
-    margin-right: 1em;
+.list {
+  flex-direction: column;
+  margin-right: 1em;
 }
-.navItem{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transition: all .25s ease;
-    color: aliceblue;
-    margin-right: 1em;
-text-transform: uppercase;
-font-family: "League Gothic";
-
+.navItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.25s ease;
+  color: aliceblue;
+  margin-right: 1em;
+  text-transform: uppercase;
+  font-family: "League Gothic";
 }
-.logo{
-    width: 10vw;
-    margin: 1vw;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
+.logo {
+  width: 10vw;
+  margin: 1vw;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  animation: swing 2s ease-in-out alternate infinite;
 }
-.logo:hover, .logo.focus{
-    filter: brightness(1) drop-shadow(0 0 4px rgba(243, 180, 8, 1));
+.logo:hover,
+.logo.focus {
+  filter: brightness(1) drop-shadow(0 0 4px rgba(243, 180, 8, 1));
+}
+@keyframes swing {
+  100% {
+    transform: scale(1.05);
+  }
 }
 @media screen and (max-width: 768px) {
-    .logo{
-        width: 20vw;
-    }
+  .logo {
+    width: 20vw;
   }
+}
+/* @keyframes swing {
+    15% {
+      transform: scale(1.01);
+    }
+    30% {
+      transform: scale(1.00);
+    }
+    65% {
+      transform: scale(1.03);
+    }
+    80% {
+      transform: scale(1.0);
+    }
+    90% {
+      transform: scale(1.04);
+    }
+    100% {
+      transform: scale(1.00);
+    }
+  } */
