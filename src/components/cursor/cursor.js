@@ -50,7 +50,7 @@ useEffect(() => {
 return (
 <div >
   {/* <div className={hidden ? styles.hidden : `${styles.cursor} ${styles.scale}`}style={{left: `${position.x}px`,top: `${position.y}px`}}></div> */}
-  <div className={hidden ? styles.hidden : styles.cursor } style={{left: `${position.x}px`,top: `${position.y}px`}}></div>
+  <div className={`${hidden ? styles.hidden : styles.cursor} ${click ? styles.click : ''}`} style={{left: `${position.x}px`,top: `${position.y}px`}}></div>
   <div className={hidden ? styles.hidden : styles.cursor2} style={{left: `${position.x}px`,top: `${position.y}px`}}></div>
   {/* <img className={styles.cursor2} style={{left:left, top:top}} src={Cursor}></img> */}
 </div>
