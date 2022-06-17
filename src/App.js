@@ -5,6 +5,7 @@ import Footer from "./components/footer/footer";
 import CardList from "./components/cards/cardList";
 import NoFoundView from "./components/404/noFoundView";
 import Description from "./components/description/description";
+import Cursor from './components/cursor/cursor'
 import Films from "./images/films3.jpg";
 import People from "./images/people3.jpg";
 import Planet from "./images/planet4.jpg";
@@ -25,14 +26,15 @@ const list = [
 function App() {
   return (
     <>
+    <Cursor/>
       <Header list={list} />
       <Routes>
-        <Route path="/" element={<Main list={list}/>} />
-        <Route path=":collection" element={<CardList />}/>
+        <Route path="/" element={<Main list={list} />} />
+        <Route path=":collection" element={<CardList />} />
         <Route path=":collection/:id" element={<Description />} />
-        <Route  path="*" element={<NoFoundView />} />
+        <Route path="*" element={<NoFoundView />} />
       </Routes>
-      <Outlet/>
+      <Outlet />
       <Footer />
     </>
   );
