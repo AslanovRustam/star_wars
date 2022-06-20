@@ -10,10 +10,14 @@
   pointer-events: none;
   transform: translate(-50%, -50%);
   transition: 0.1s;
+  z-index: 2;
+  opacity: 0.5;
+  background-color: black;
 }
 .cursor2 {
   width: 8px;
   height: 8px;
+  opacity: 1;
   background-color: rgba(243, 180, 8, 1);
   transition: 0.3s;
 }
@@ -24,6 +28,9 @@
     transform: scale(2);
  }
  .click {
-    transform: translate(-50%, -50%) scale(0.5);
+    transform: translate(-50%, -50%) scale(0.4);
     background-color: #121212;
+ }
+ .linkHovered {
+    transform: translate(-50%, -50%) scale(1.5);
  }

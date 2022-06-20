@@ -6,6 +6,7 @@ export default function Cursor() {
 const [position, setPosition] = useState({ x: 0, y: 0 });
 const [hidden, setHidden] = useState(false); ////НЕ ОБЯЗАТЕЛЬНО - чтобы спрятать курсор при выходе за границы окна
 const [click, setClick] = useState(false);///НЕ ОБЯЗАТЕЛЬНО - отслеживаем клики
+const [linkHover, setLinkHover] = useState(false); ///НЕ ОБЯЗАТЕЛЬНО - для стилизации ховера
 
 useEffect(() => {
   const addEventListeners = () => {
@@ -43,16 +44,30 @@ useEffect(() => {
     setClick(false);
   };
 
+  const addLinkEvents = () => {
+    document.querySelectorAll('a').forEach((el) => {
+      el.addEventListener('mouseover', () => setLinkHover(true));
+      el.addEventListener('mouseout', () => setLinkHover(false));
+    });
+    document.querySelectorAll('button').forEach((el) => {
+      el.addEventListener('mouseover', () => setLinkHover(true));
+      el.addEventListener('mouseout', () => setLinkHover(false));
+    });
+    document.querySelectorAll('label').forEach((el) => {
+        el.addEventListener('mouseover', () => setLinkHover(true));
+        el.addEventListener('mouseout', () => setLinkHover(false));
+      });
+  };
+
   addEventListeners();
+  addLinkEvents();
   return () => removeEventListeners();
 }, []);
 
 return (
 <div >
-  {/* <div className={hidden ? styles.hidden : `${styles.cursor} ${styles.scale}`}style={{left: `${position.x}px`,top: `${position.y}px`}}></div> */}
-  <div className={`${hidden ? styles.hidden : styles.cursor} ${click ? styles.click : ''}`} style={{left: `${position.x}px`,top: `${position.y}px`}}></div>
+  <div className={`${hidden ? styles.hidden : styles.cursor} ${click ? styles.click : ''} ${linkHover ? styles.linkHovered : ''}`} style={{left: `${position.x}px`,top: `${position.y}px`}}></div>
   <div className={hidden ? styles.hidden : styles.cursor2} style={{left: `${position.x}px`,top: `${position.y}px`}}></div>
-  {/* <img className={styles.cursor2} style={{left:left, top:top}} src={Cursor}></img> */}
 </div>
 );
 }

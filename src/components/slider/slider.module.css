@@ -97,7 +97,7 @@
 
 .dot,
 .activeDot {
-  cursor: pointer;
+  /* cursor: pointer; */
   height: 0.5rem;
   width: 1.5rem;
   margin: 0 3px;

@@ -20,7 +20,7 @@
   width: 50vw;
   height: 65vh;
   transform: translateZ(40px) scale(0.8);
-  cursor: url(../../images/cursor2.png) 10 10 , pointer;
+  /* cursor: url(../../images/cursor2.png) 10 10 , pointer; */
 }
 .tilt {
   /* width: 45vw; */
