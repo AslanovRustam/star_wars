@@ -6,7 +6,7 @@ body {
   cursor: none;
 }
 body::after {
-  content: "";
+  /* content: "";
   position: absolute;
   background-image: url(./images/07.png);
   object-fit: contain;
@@ -17,7 +17,7 @@ body::after {
   bottom: 0;
   right: 0;
   animation: swing 80s linear infinite running;
-  z-index: -1;
+  z-index: -1; */
 }
 
 html{
@@ -58,5 +58,12 @@ p {
 @keyframes side {
   100% {
     transform: translateY(100%);
+  }
+}
+@media screen and (max-width: 768px) {
+  body::after {
+
+    background-image: none;
+
   }
 }
