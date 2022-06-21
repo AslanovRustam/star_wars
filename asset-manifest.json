@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/star_wars/static/css/main.7e50668f.css",
+    "main.css": "/star_wars/static/css/main.0a45cf73.css",
     "main.js": "/star_wars/static/js/main.770b6045.js",
     "static/js/787.161ebaff.chunk.js": "/star_wars/static/js/787.161ebaff.chunk.js",
     "static/media/loadingBig2.gif": "/star_wars/static/media/loadingBig2.c35ec855e66367233605.gif",
@@ -11,17 +11,16 @@
     "static/media/starships3.jpg": "/star_wars/static/media/starships3.7fc68cddac672e0d0cff.jpg",
     "static/media/vehicles3.jpg": "/star_wars/static/media/vehicles3.6fef1f254e0bf4b19c50.jpg",
     "static/media/various.jpg": "/star_wars/static/media/various.f8c3805fcc4c63330383.jpg",
-    "static/media/07.png": "/star_wars/static/media/07.c082d34412067b4bb79c.png",
     "static/media/star-wars-background.jpg": "/star_wars/static/media/star-wars-background.b211fc0645e20fb74453.jpg",
     "static/media/logo.png": "/star_wars/static/media/logo.23037d122e36f6d0b71a.png",
     "static/media/loading.gif": "/star_wars/static/media/loading.a1a996746e5e48352c81.gif",
     "index.html": "/star_wars/index.html",
-    "main.7e50668f.css.map": "/star_wars/static/css/main.7e50668f.css.map",
+    "main.0a45cf73.css.map": "/star_wars/static/css/main.0a45cf73.css.map",
     "main.770b6045.js.map": "/star_wars/static/js/main.770b6045.js.map",
     "787.161ebaff.chunk.js.map": "/star_wars/static/js/787.161ebaff.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7e50668f.css",
+    "static/css/main.0a45cf73.css",
     "static/js/main.770b6045.js"
   ]
 }
