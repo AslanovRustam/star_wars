@@ -65,7 +65,7 @@ useEffect(() => {
 }, []);
 
 return (
-<div >
+<div className={styles.wraper}>
   <div className={`${hidden ? styles.hidden : styles.cursor} ${click ? styles.click : ''} ${linkHover ? styles.linkHovered : ''}`} style={{left: `${position.x}px`,top: `${position.y}px`}}></div>
   <div className={hidden ? styles.hidden : styles.cursor2} style={{left: `${position.x}px`,top: `${position.y}px`}}></div>
 </div>

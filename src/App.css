@@ -20,7 +20,7 @@ body::after {
   z-index: -1; */
 }
 
-html{
+html {
   cursor: none;
 }
 
@@ -62,8 +62,10 @@ p {
 }
 @media screen and (max-width: 768px) {
   body::after {
-
     background-image: none;
-
+  }
+  html,
+  body {
+    cursor: auto;
   }
 }
